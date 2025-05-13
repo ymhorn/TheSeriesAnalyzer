@@ -35,7 +35,16 @@ namespace TheSeriesAnalyzer
         }
         static void DisplayInOrder(int[] series)
         { 
-            Array.Sort(series);
+            for (int i = 0; i < series.Length-1; i++)
+            {
+                for (int j = 0; j < series.Length-i-1; j++)
+                {
+                    if (series[j] > series[j+1])
+                    {
+                        (series[j], series[j + 1]) = (series[j + 1], series[j]);
+                    }
+                }
+            }
             foreach (int number in series)
             {
                 DisplayInt(number);
