@@ -50,11 +50,11 @@ namespace TheSeriesAnalyzer
         }
         static void MaxInSeries(int[] series)
         {
-            
+            DisplayInt(series.Max());
         }
         static void MinInSeries(int[] series)
         {
-
+            DisplayInt(series.Min());
         }
         static void AverageInSeries(int[] series)
         {
