@@ -78,6 +78,10 @@ namespace TheSeriesAnalyzer
                 string userInput = InfoRecieved();
                 input = userInput.Split(',');
                 valid = ValidSeries(input);
+                if (valid != true)
+                {
+                    DisplayString("That was not a valid bunch");
+                }
             }
             int[] series = Array.ConvertAll(input, int.Parse);
             return series;
@@ -88,7 +92,7 @@ namespace TheSeriesAnalyzer
             int[] series = NumberSeries(input);
             while (exit != true)
             {
-                DisplayString("What would you like to do with your numbers:\n" +
+                DisplayString("\nWhat would you like to do with your numbers:\n" +
                     "a. Input a new series\n" +
                     "b. Display the series in the order it was entered\n" +
                     "c. Display the series in the reversed order that it was entered\n" +
