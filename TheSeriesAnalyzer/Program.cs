@@ -63,7 +63,12 @@ namespace TheSeriesAnalyzer
         }
         static void SumOfSeries(int[] series)
         {
-            DisplayInt(series.Sum());
+            int sum = 0;
+            foreach (int number in series)
+            {
+                sum += number;
+            }
+            DisplayInt(sum);
         }
         static void LengthOfSeries(int[] series)
         {
