@@ -43,10 +43,9 @@ namespace TheSeriesAnalyzer
         }
         static void DisplayInOppositeOfEntered(int[] series)
         {
-            Array.Reverse(series);
-            foreach (int number in series)
+            for (int i = series.Length - 1; i >= 0; i--)
             {
-                DisplayInt(number);
+                DisplayInt(series[i]);
             }
         }
         static void MaxInSeries(int[] series)
