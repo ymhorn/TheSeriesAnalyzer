@@ -18,11 +18,11 @@ namespace TheSeriesAnalyzer
         }
         static void DisplayInt(int toPrint)
         {
-
+            Console.WriteLine(toPrint);
         }
         static void DisplayString(string toPrint)
         {
-
+            Console.WriteLine(toPrint);
         }
         static void DisplaySeries(List<int>series)
         {
