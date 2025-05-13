@@ -24,35 +24,36 @@ namespace TheSeriesAnalyzer
         {
             Console.WriteLine(toPrint);
         }
-        static void DisplaySeries(List<int>series)
+        static void DisplaySeries(int[] series)
+        {
+            
+        }
+        static void DisplayInOrder(int[] series)
+        {
+            
+
+        }
+        static void DisplayInOppositeOrder(int[] series)
         {
 
         }
-        static void DisplayInOrder(List<int>series)
+        static void MaxInSeries(int[] series)
         {
 
         }
-        static void DisplayInOppositeOrder(List<int>series)
+        static void MinInSeries(int[] series)
         {
 
         }
-        static void MaxInSeries(List<int>series)
+        static void AverageInSeries(int[] series)
         {
 
         }
-        static void MinInSeries(List<int> series)
+        static void SumOfSeries(int[] series)
         {
 
         }
-        static void AverageInSeries(List<int> series)
-        {
-
-        }
-        static void SumOfSeries(List<int> series)
-        {
-
-        }
-        static void LengthOfSeries(List<int> series)
+        static void LengthOfSeries(int[] series)
         {
 
         }
