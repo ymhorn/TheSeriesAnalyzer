@@ -26,7 +26,10 @@ namespace TheSeriesAnalyzer
         }
         static void DisplaySeries(int[] series)
         {
-            
+            foreach (int number in series)
+            {
+                DisplayInt(number);
+            }
         }
         static void DisplayInOrder(int[] series)
         {
