@@ -51,15 +51,36 @@ namespace TheSeriesAnalyzer
         }
         static void MaxInSeries(int[] series)
         {
-            DisplayInt(series.Max());
+            int biggest = series[0];
+            foreach (int number in series)
+            {
+                if (number > biggest)
+                {
+                    biggest = number;
+                }
+            }
+            DisplayInt(biggest);
         }
         static void MinInSeries(int[] series)
         {
-            DisplayInt(series.Min());
+            int smallest = series[0];
+            foreach (int number in series)
+            {
+                if (number < smallest)
+                {
+                    smallest = number;
+                }
+            }
+            DisplayInt(smallest);
         }
         static void AverageInSeries(int[] series)
         {
-            DisplayInt(series.Sum() / series.Length);
+            int sum = 0;
+            foreach (int number in series)
+            {
+                sum += number;
+            }
+            DisplayInt(sum / series.Length);
         }
         static void SumOfSeries(int[] series)
         {
