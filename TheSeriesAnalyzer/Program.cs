@@ -9,6 +9,7 @@ namespace TheSeriesAnalyzer
 {
     internal class Program
     {
+        static string[] functionSetter = { "abcd" };
         static void Main(string[] args)
         {
             Menu(args);
@@ -68,7 +69,7 @@ namespace TheSeriesAnalyzer
         {
             DisplayInt(series.Length);
         }
-        static int[] NumberSeries(string[] input = null)
+        static int[] NumberSeries(string[] input)
         {
             bool valid = false;
             valid = ValidSeries(input);
@@ -107,7 +108,7 @@ namespace TheSeriesAnalyzer
                 switch (chosenOption)
                 {
                     case "a":
-                        series = NumberSeries();
+                        series = NumberSeries(functionSetter);
                         break;
                     case "b":
                         DisplaySeries(series);
