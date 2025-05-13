@@ -11,7 +11,7 @@ namespace TheSeriesAnalyzer
     {
         static void Main(string[] args)
         {
-
+        
         }
         static string InfoRecieved()
         {
@@ -74,7 +74,7 @@ namespace TheSeriesAnalyzer
             valid = ValidSeries(input);
             while (valid != true)
             {
-                DisplayString("please enter a bunch of numbers, please put a comma(,) no spaces between each number");
+                DisplayString("Please enter a bunch of numbers, please put a comma(,) no spaces between each number");
                 string userInput = InfoRecieved();
                 input = userInput.Split(',');
                 valid = ValidSeries(input);
@@ -82,8 +82,63 @@ namespace TheSeriesAnalyzer
             int[] series = Array.ConvertAll(input, int.Parse);
             return series;
         }
-        static void Menu(int[] input)
+        static void Menu(string[] input)
         {
+            bool exit = false;
+            int[] series = NumberSeries(input);
+            while (exit != true)
+            {
+                DisplayString("What would you like to do with your numbers:\n" +
+                    "a. Input a new series\n" +
+                    "b. Display the series in the order it was entered\n" +
+                    "c. Display the series in the reversed order that it was entered\n" +
+                    "d. Display the series in order from smallest to biggest\n" +
+                    "e. Display the biggest value in the series\n" +
+                    "f. Display the smallest value in the series\n" +
+                    "g. Display the average value in the series\n" +
+                    "h. display the number of elements in the series\n" +
+                    "i. display the sum of all the elements in the series\n" +
+                    "j. exit the program");
+                string chosenOption = InfoRecieved();
+                switch (chosenOption)
+                {
+                    case "a":
+                        series = NumberSeries();
+                        break;
+                    case "b":
+                        DisplaySeries(series);
+                        break;
+                    case "c":
+                        DisplayInOppositeOfEntered(series);
+                        break;
+                    case "d":
+                        DisplayInOrder(series);
+                        break;
+                    case "e":
+                        MaxInSeries(series);
+                        break;
+                    case "f":
+                        MinInSeries(series);
+                        break;
+                    case "g":
+                        AverageInSeries(series);
+                        break;
+                    case "h":
+                        LengthOfSeries(series);
+                        break;
+                    case "i":
+                        SumOfSeries(series);
+                        break;
+                    case "j":
+                        exit = true;
+                        break;
+                    default:
+                        DisplayString("You haave not entered a valid option!!\n" +
+                            "Please check and try again");
+                        break;
+                }
+
+            }
 
         }
         static bool ValidSeries(string[] input)
@@ -110,14 +165,5 @@ namespace TheSeriesAnalyzer
             }
             return true;
         }
-        
-
-
-
-
-
-
-
-
     }
 }
