@@ -42,11 +42,15 @@ namespace TheSeriesAnalyzer
         }
         static void DisplayInOppositeOfEntered(int[] series)
         {
-
+            Array.Reverse(series);
+            foreach (int number in series)
+            {
+                DisplayInt(number);
+            }
         }
         static void MaxInSeries(int[] series)
         {
-
+            
         }
         static void MinInSeries(int[] series)
         {
