@@ -11,7 +11,7 @@ namespace TheSeriesAnalyzer
     {
         static void Main(string[] args)
         {
-        
+            Menu(args);
         }
         static string InfoRecieved()
         {
