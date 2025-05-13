@@ -58,27 +58,27 @@ namespace TheSeriesAnalyzer
         }
         static void AverageInSeries(int[] series)
         {
-
+            DisplayInt(series.Sum() / series.Length);
         }
         static void SumOfSeries(int[] series)
         {
-
+            DisplayInt(series.Sum());
         }
         static void LengthOfSeries(int[] series)
         {
-
+            DisplayInt(series.Length);
         }
-        static List<int>NumberSeries(string[] input)
+        static int[] NumberSeries(string[] input = null)
         {
 
         }
-        static void Menu(string[] input)
+        static void Menu(int[] input)
         {
 
         }
         static bool ValidSeries(string[] input)
         {
-
+          
         }
         
 
