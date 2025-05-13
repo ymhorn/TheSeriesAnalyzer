@@ -70,7 +70,17 @@ namespace TheSeriesAnalyzer
         }
         static int[] NumberSeries(string[] input = null)
         {
-
+            bool valid = false;
+            valid = ValidSeries(input);
+            while (valid != true)
+            {
+                DisplayString("please enter a bunch of numbers, please put a comma(,) no spaces between each number");
+                string userInput = InfoRecieved();
+                input = userInput.Split(',');
+                valid = ValidSeries(input);
+            }
+            int[] series = Array.ConvertAll(input, int.Parse);
+            return series;
         }
         static void Menu(int[] input)
         {
