@@ -78,7 +78,27 @@ namespace TheSeriesAnalyzer
         }
         static bool ValidSeries(string[] input)
         {
-          
+            int[] intSeries;
+            if (input.Length < 3)
+            {
+                return false;
+            }
+            try
+            {
+                intSeries = Array.ConvertAll(input, int.Parse);
+            }
+            catch
+            {
+                return false;
+            }
+            foreach (int number in intSeries)
+            {
+                if (number < 0)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
         
 
