@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,11 +33,14 @@ namespace TheSeriesAnalyzer
             }
         }
         static void DisplayInOrder(int[] series)
-        {
-            
-
+        { 
+            Array.Sort(series);
+            foreach (int number in series)
+            {
+                DisplayInt(number);
+            }
         }
-        static void DisplayInOppositeOrder(int[] series)
+        static void DisplayInOppositeOfEntered(int[] series)
         {
 
         }
