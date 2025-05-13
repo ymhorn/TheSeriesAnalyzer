@@ -14,7 +14,7 @@ namespace TheSeriesAnalyzer
         }
         static string InfoRecieved()
         {
-
+            return Console.ReadLine();
         }
         static void DisplayInt(int toPrint)
         {
