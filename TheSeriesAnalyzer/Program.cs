@@ -109,7 +109,7 @@ namespace TheSeriesAnalyzer
             valid = ValidSeries(input);
             while (valid != true)
             {
-                DisplayString("Please enter a bunch of numbers, please put a comma(,) no spaces between each number");
+                DisplayString("Please enter a bunch of at least 3 numbers, please put a comma(,) no spaces between each number");
                 string userInput = InfoRecieved();
                 input = userInput.Split(',');
                 valid = ValidSeries(input);
@@ -172,7 +172,7 @@ namespace TheSeriesAnalyzer
                         exit = true;
                         break;
                     default:
-                        DisplayString("You haave not entered a valid option!!\n" +
+                        DisplayString("You have not entered a valid option!!\n" +
                             "Please check and try again");
                         break;
                 }
