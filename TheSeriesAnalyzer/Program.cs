@@ -4,28 +4,33 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//This program will produce all sorts of calculations on a series of numbers
 namespace TheSeriesAnalyzer
 {
     internal class Program
     {
         static string[] functionSetter = { "abcd" };
+        //This function will cause the program to run
         static void Main(string[] args)
         {
             Menu(args);
         }
+        //Recieves information from user
         static string InfoRecieved()
         {
             return Console.ReadLine();
         }
+        //Displays numbers
         static void DisplayInt(int toPrint)
         {
             Console.WriteLine(toPrint);
         }
+        //Displays words
         static void DisplayString(string toPrint)
         {
             Console.WriteLine(toPrint);
         }
+        //To display the users series
         static void DisplaySeries(int[] series)
         {
             foreach (int number in series)
@@ -33,6 +38,7 @@ namespace TheSeriesAnalyzer
                 DisplayInt(number);
             }
         }
+        //To display the series in numerical order
         static void DisplayInOrder(int[] series)
         { 
             for (int i = 0; i < series.Length-1; i++)
@@ -50,6 +56,7 @@ namespace TheSeriesAnalyzer
                 DisplayInt(number);
             }
         }
+        //To display the series LIFO
         static void DisplayInOppositeOfEntered(int[] series)
         {
             for (int i = series.Length - 1; i >= 0; i--)
@@ -57,6 +64,7 @@ namespace TheSeriesAnalyzer
                 DisplayInt(series[i]);
             }
         }
+        //Biggest number in series
         static void MaxInSeries(int[] series)
         {
             int biggest = series[0];
@@ -69,6 +77,7 @@ namespace TheSeriesAnalyzer
             }
             DisplayInt(biggest);
         }
+        //Smallest number in series
         static void MinInSeries(int[] series)
         {
             int smallest = series[0];
@@ -81,6 +90,7 @@ namespace TheSeriesAnalyzer
             }
             DisplayInt(smallest);
         }
+        //The average of the series
         static void AverageInSeries(int[] series)
         {
             int sum = 0;
@@ -90,6 +100,7 @@ namespace TheSeriesAnalyzer
             }
             DisplayInt(sum / series.Length);
         }
+        //Displays the sum of all the numbers 
         static void SumOfSeries(int[] series)
         {
             int sum = 0;
@@ -99,10 +110,12 @@ namespace TheSeriesAnalyzer
             }
             DisplayInt(sum);
         }
+        //The amount of numbers in the series
         static void LengthOfSeries(int[] series)
         {
             DisplayInt(series.Length);
         }
+        //Function that recieves/creates the series
         static int[] NumberSeries(string[] input)
         {
             bool valid = false;
@@ -121,6 +134,7 @@ namespace TheSeriesAnalyzer
             int[] series = Array.ConvertAll(input, int.Parse);
             return series;
         }
+        //Arranges all the functions and displays all options to user on console
         static void Menu(string[] input)
         {
             bool exit = false;
@@ -180,6 +194,7 @@ namespace TheSeriesAnalyzer
             }
 
         }
+        //Checks the validity of the series
         static bool ValidSeries(string[] input)
         {
             int[] intSeries;
